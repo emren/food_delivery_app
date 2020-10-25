@@ -35,3 +35,4 @@ https://pub.dev/packages/provider
 For this app there will be two models to hold state.
 Basket and favorite states will be passed down the widget tree.
 To do that I will use multiprovider at the main.dart file.
+
