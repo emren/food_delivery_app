@@ -1,3 +1,5 @@
+About:
+A Food delivery app. It has a shopping bag and a favorites list included.
 
 Intro:
 For this crossplatform app I am going to use the Flutter framework with Dart language.
@@ -35,6 +37,9 @@ https://pub.dev/packages/provider
 For this app there will be two models to hold state.
 Basket and favorite states will be passed down the widget tree.
 To do that I will use multiprovider at the main.dart file.
+
+Size Configuration:
+A Config file is under services folder. This will allow resize to different screensizes including tablets without losing design qualities.
 
 Icons:
 Icons are used from the following links
