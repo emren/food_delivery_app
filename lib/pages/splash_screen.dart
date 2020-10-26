@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'home.dart';
 
-
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -16,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 15), () {
+    Future.delayed(Duration(seconds: 10), () {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => Home()),
@@ -42,50 +41,38 @@ This will be a good place to load states and shared prefs.
         child: Column(
           children: <Widget>[
             SizedBox(
-              //height: 150,
               height: 16.75 * SizeConfig.heightMultiplier,
             ),
-            // Container(
-            //   //width: 150,
-            //   width: 36.2 * SizeConfig.widthMultiplier,
-            //   //height: 150,
-            //   height: 16.75 * SizeConfig.heightMultiplier,
-            //   decoration: BoxDecoration(
-            //     image: DecorationImage(
-            //       image: AssetImage(''),
-            //     ),
-            //   ),
-            // ),
-            SizedBox(
-              //height: 30,
-              height: 3.35 * SizeConfig.heightMultiplier,
-            ),
-            Center(
-              child: Text(
-                'FOOD DELIVERY APP',
-                style: GoogleFonts.titilliumWeb(
-                  textStyle: TextStyle(
-                      //color: Colors.blue[800],
-                      color: Color(0xFF314CFF),
-                      //fontSize: 50,
-                      fontSize: 5.58 * SizeConfig.textMultiplier,
-                      fontWeight: FontWeight.bold),
+            Container(
+              height: 400,
+              width: 400,
+              decoration: BoxDecoration(
+                  color: Colors.deepOrangeAccent, shape: BoxShape.circle),
+              child: Center(
+                child: Text(
+                  'FOOD DELIVERY APP',
+                  style: GoogleFonts.hennyPenny(
+                    textStyle: TextStyle(
+                        color: Colors.green[300],
+                        fontSize: 4 * SizeConfig.textMultiplier,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 3.35 * SizeConfig.heightMultiplier,
             ),
             Text(
               'order your food with pleasure',
               style: GoogleFonts.titilliumWeb(
                 textStyle: TextStyle(
-                    //color: Colors.blue[800],
-                    color: Color(0xFF314CFF),
-                    //fontSize: 20,
+                    color: Colors.green[800],
                     fontSize: 2.23 * SizeConfig.textMultiplier,
                     fontWeight: FontWeight.bold),
               ),
             ),
             SizedBox(
-              //height: 150,
               height: 16.75 * SizeConfig.heightMultiplier,
             ),
             Row(
@@ -95,9 +82,7 @@ This will be a good place to load states and shared prefs.
                   'version',
                   style: GoogleFonts.titilliumWeb(
                     textStyle: TextStyle(
-                        //color: Colors.blue[800],
-                        color: Color(0xFF314CFF),
-                        //fontSize: 15,
+                        color: Colors.green[800],
                         fontSize: 1.67 * SizeConfig.textMultiplier,
                         fontWeight: FontWeight.bold),
                   ),
@@ -106,9 +91,7 @@ This will be a good place to load states and shared prefs.
                   ' 1.1.01',
                   style: GoogleFonts.titilliumWeb(
                     textStyle: TextStyle(
-                        //color: Colors.blue[800],
-                        color: Color(0xFF314CFF),
-                        //fontSize: 15,
+                        color: Colors.green[800],
                         fontSize: 1.67 * SizeConfig.textMultiplier,
                         fontWeight: FontWeight.bold),
                   ),
