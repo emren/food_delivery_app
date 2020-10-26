@@ -36,3 +36,15 @@ For this app there will be two models to hold state.
 Basket and favorite states will be passed down the widget tree.
 To do that I will use multiprovider at the main.dart file.
 
+Icons:
+Icons are used from the following links
+<a target="_blank" href="https://icons8.com/icons/set/pizza">Pizza icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/pizza">Pizza icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/salad-bowl">Salad Bowl icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/salad-bowl">Salad Bowl icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/bar">Bar icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/bar">Bar icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/add-to-favorites">Add to Favorites icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/add-to-favorites">Add to Favorites icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/shopping-bag">Shopping Bag icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/shopping-bag">Shopping Bag icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
