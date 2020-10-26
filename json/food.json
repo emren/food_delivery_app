@@ -1,0 +1,65 @@
+[
+  {
+    "type": "pizza",
+    "name": "Napoliten Pizza",
+    "desription": "bla bla",
+    "price": "30",
+    "link": "url"
+  },
+  {
+    "type": "pizza",
+    "name": "Roma Pizza",
+    "desription": "bla bla",
+    "price": "35",
+    "link": "url"
+  },
+  {
+    "type": "pizza",
+    "name": "Istanbul Pizza",
+    "desription": "bla bla",
+    "price": "40",
+    "link": "url"
+  },
+  {
+    "type": "salad",
+    "name": "Tuna Salad",
+    "desription": "bla bla",
+    "price": "30",
+    "link": "url"
+  },
+  {
+    "type": "salad",
+    "name": "Beef Salad",
+    "desription": "bla bla",
+    "price": "30",
+    "link": "url"
+  },
+  {
+    "type": "salad",
+    "name": "Chicken Salad",
+    "desription": "bla bla",
+    "price": "30",
+    "link": "url"
+  },
+  {
+    "type": "drink",
+    "name": "Fanta",
+    "desription": "bla bla",
+    "price": "5",
+    "link": "url"
+  },
+  {
+    "type": "drink",
+    "name": "Coca Cola",
+    "desription": "bla bla",
+    "price": "8",
+    "link": "url"
+  },
+  {
+    "type": "drink",
+    "name": "Ayran",
+    "desription": "bla bla",
+    "price": "7",
+    "link": "url"
+  }
+]
