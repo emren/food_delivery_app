@@ -23,7 +23,7 @@ class FoodProvider extends ChangeNotifier {
   }
 
   void initFoodList() {
-    loadMapObjects().whenComplete(() => print(foodList));
+    loadMapObjects().whenComplete(() => print('food list loaded'));
   }
 
   List<FoodModel> getPizzaList(){
@@ -39,5 +39,10 @@ class FoodProvider extends ChangeNotifier {
   List<FoodModel> getDrinkList(){
     List list = foodList.where((i) => i.type == "drink").toList();
     return list;
+  }
+
+  FoodModel getFood(String name){
+    FoodModel food = foodList.firstWhere((i) => i.name == name,  orElse: () => null);
+    return food;
   }
 }

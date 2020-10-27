@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/models/food_provider.dart';
 import 'package:food_delivery_app/services/size_config.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class FoodCard extends StatelessWidget {
@@ -43,11 +44,17 @@ class FoodCard extends StatelessWidget {
                   shape: BoxShape.circle,
                   image: DecorationImage(
                       image: NetworkImage(
-                        "https://picsum.photos/250?image=9",
+                        foodProvider.getFood(name).link,
                       ),
                       fit: BoxFit.cover)),
             ),
-            Text(name),
+            Text(name,
+                style: GoogleFonts.titilliumWeb(
+                  textStyle: TextStyle(
+                      color: Colors.green[800],
+                      fontSize: 2 * SizeConfig.textMultiplier,
+                      fontWeight: FontWeight.bold),
+                )),
           ],
         ),
       ),

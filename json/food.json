@@ -4,21 +4,21 @@
     "name": "Napoliten Pizza",
     "desription": "bla bla",
     "price": "30",
-    "link": "url"
+    "link": "https://seyler.ekstat.com/img/max/800/n/nmSGJgeTslMYWNEE-637124371738515625.jpg"
   },
   {
     "type": "pizza",
     "name": "Roma Pizza",
     "desription": "bla bla",
     "price": "35",
-    "link": "url"
+    "link": "https://media-cdn.tripadvisor.com/media/photo-s/03/a5/30/20/roma-pizza.jpg"
   },
   {
     "type": "pizza",
     "name": "Istanbul Pizza",
     "desription": "bla bla",
     "price": "40",
-    "link": "url"
+    "link": "https://bigseventravel.com/wp-content/uploads/2019/07/Screenshot-2019-07-21-at-17.26.53.png"
   },
   {
     "type": "salad",
@@ -67,27 +67,27 @@
     "name": "Vegeteran Pizza",
     "desription": "bla bla",
     "price": "30",
-    "link": "url"
+    "link": "https://lh3.googleusercontent.com/proxy/gazUrb9urJkg66srDIeM25s3i_UtrcuV5jVBDQ5NjmHspavQThPIWpN9sKzR-IC4GZIygA26cAsovQeyIWN8G891aLBpi0IDZtY8J14Khn5hY2A5Vg"
   },
   {
     "type": "pizza",
     "name": "Salami Pizza",
     "desription": "bla bla",
     "price": "30",
-    "link": "url"
+    "link": "https://edu-caferoma.odoo.com/web/image/product.template/80/image"
   },
   {
     "type": "pizza",
     "name": "Seafood pizza",
     "desription": "bla bla",
     "price": "30",
-    "link": "url"
+    "link": "https://besthqwallpapers.com/Uploads/8-3-2020/124045/thumb2-seafood-pizza-pizza-with-mussels-fast-food-pizza-types-of-pizzas.jpg"
   },
   {
     "type": "pizza",
     "name": "New York Pizza",
     "desription": "bla bla",
     "price": "30",
-    "link": "url"
+    "link": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_474,q_75,w_640/v1/clients/newyorkstate/838f0205_b914_48f2_96a0_0ce77623a71b_fa44e32e-78ee-4bc0-9e40-a9a9a98ed5ca.jpg"
   }
 ]
