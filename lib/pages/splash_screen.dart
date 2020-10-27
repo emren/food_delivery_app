@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:after_init/after_init.dart';
+import 'package:food_delivery_app/models/food_provider.dart';
 import 'package:food_delivery_app/services/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 import 'home.dart';
 
@@ -15,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 10), () {
+    Future.delayed(Duration(seconds: 5), () {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => Home()),
@@ -29,7 +31,10 @@ This will be a good place to load states and shared prefs.
  */
 
   @override
-  void didInitState() {}
+  void didInitState() {
+    FoodProvider foodProvider = Provider.of<FoodProvider>(context);
+    foodProvider.initFoodList();
+  }
 
   @override
   Widget build(BuildContext context) {

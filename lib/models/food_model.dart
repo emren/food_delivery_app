@@ -3,7 +3,7 @@ class FoodModel{
   String type;
   String name;
   String description;
-  int price;
+  dynamic price;
   String link;
 
   FoodModel({this.type, this.name, this.description,  this.price, this.link});
