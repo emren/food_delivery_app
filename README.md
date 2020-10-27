@@ -8,6 +8,15 @@ This performance edge comes from the fact that unlike React, Flutter compiles in
 React uses bridge to native code.
 Also Flutter uses Skia Graphics Library which gives 60 frames per second therefore Flutter UI is very fast and smooth.
 
+Flutter vs React:
+The papers below linked find very close performances and no significant difference between Flutter and React.
+https://www.theseus.fi/bitstream/handle/10024/146232/thesis.pdf?sequence=1
+https://www.diva-portal.org/smash/get/diva2:1349917/FULLTEXT01.pdf
+But authors point out that architecture wise, the Flutter engine’s C/C++ code is compiled
+with Android’s NDK and LLVM on iOS respectively, and any Dart code is AOT-compiled
+into native code during compilation. Thus giving a better structure than React as it uses bridge to native.
+Since React is a more mature technology and Flutter is younger technology, we may see Flutter using more of its structural edge in the coming years.
+
 Flutter vs Native:
 According to this paper https://www.diva-portal.org/smash/get/diva2:1442804/FULLTEXT01.pdf Flutter has very small performance difference when compared to native.
 Same study finds that sample app took less code to build with Flutter than native languages.

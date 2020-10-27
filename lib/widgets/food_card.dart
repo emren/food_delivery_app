@@ -10,7 +10,6 @@ class FoodCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     FoodProvider foodProvider = Provider.of<FoodProvider>(context);
 
     return GestureDetector(
@@ -34,8 +33,20 @@ class FoodCard extends StatelessWidget {
                 spreadRadius: 0)
           ],
         ),
-        child: Stack(
+        child: Column(
           children: <Widget>[
+            Container(
+              height: 100,
+              width: 100,
+              decoration: BoxDecoration(
+                  color: Colors.deepOrangeAccent,
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                      image: NetworkImage(
+                        "https://picsum.photos/250?image=9",
+                      ),
+                      fit: BoxFit.cover)),
+            ),
             Text(name),
           ],
         ),

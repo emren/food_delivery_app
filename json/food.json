@@ -61,5 +61,33 @@
     "desription": "bla bla",
     "price": "7",
     "link": "url"
+  },
+  {
+    "type": "pizza",
+    "name": "Vegeteran Pizza",
+    "desription": "bla bla",
+    "price": "30",
+    "link": "url"
+  },
+  {
+    "type": "pizza",
+    "name": "Salami Pizza",
+    "desription": "bla bla",
+    "price": "30",
+    "link": "url"
+  },
+  {
+    "type": "pizza",
+    "name": "Seafood pizza",
+    "desription": "bla bla",
+    "price": "30",
+    "link": "url"
+  },
+  {
+    "type": "pizza",
+    "name": "New York Pizza",
+    "desription": "bla bla",
+    "price": "30",
+    "link": "url"
   }
 ]
