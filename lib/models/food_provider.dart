@@ -25,4 +25,19 @@ class FoodProvider extends ChangeNotifier {
   void initFoodList() {
     loadMapObjects().whenComplete(() => print(foodList));
   }
+
+  List<FoodModel> getPizzaList(){
+    List list = foodList.where((i) => i.type == "pizza").toList();
+    return list;
+  }
+
+  List<FoodModel> getSaladList(){
+    List list = foodList.where((i) => i.type == "salad").toList();
+    return list;
+  }
+
+  List<FoodModel> getDrinkList(){
+    List list = foodList.where((i) => i.type == "drink").toList();
+    return list;
+  }
 }
