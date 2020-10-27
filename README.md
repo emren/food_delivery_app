@@ -8,6 +8,53 @@ This performance edge comes from the fact that unlike React, Flutter compiles in
 React uses bridge to native code.
 Also Flutter uses Skia Graphics Library which gives 60 frames per second therefore Flutter UI is very fast and smooth.
 
+Flutter vs Native:
+According to this paper https://www.diva-portal.org/smash/get/diva2:1442804/FULLTEXT01.pdf Flutter has very small performance difference when compared to native.
+Same study finds that sample app took less code to build with Flutter than native languages.
+Appearancevise study finds very little difference to native looks at Flutter.
+Also points out that Flutter is new and animations space doesn't match yet the native.
+Conclusion part of the study is below which you can find also on page 37;
+
+    Flutter is a useful toolkit that enables easy ways of creating new applications. It
+    has gotten more and more popular recently and is talked about in the application
+    development industry as a possible replacement of React Native and how it can
+    be compared with native applications.
+    The experiment of this report revealed that there is a small difference between
+    the CPU performance of Flutter iOS and native Swift iOS respective Flutter
+    android and flutter native. There seem to be a difference between the performance of iOS and android but when it comes to how well Flutter can perform
+    in CPU usage compared to native applications, there is barely a difference. The
+    summery for this is that Flutter can perform up to par with a native application for the type of application size that was tested. To verify these results
+    and determine that Flutter can keep up with native, further testing needs to be
+    carried out. There are multiple other metrics that are needed in order to fully
+    display how Flutter compares to native applications in performance.
+    When it came down to code size, the Flutter application had a low amount of
+    code needed (125 lines) compared to iOS (363 lines) and android (217 lines).
+    Flutter do not split its functionality code and visual code which lowers the
+    amount of code and files. The Flutter code had similarities to web languages
+    and often only required replicating to create new parts. The complexity of code
+    that is needed for flutter, is simpler than the code that was needed for the native
+    builds. This can however, not be fully concluded since additional methods of
+    measuring code complexity has to be carried out for a better answer regarding
+    the complexity and code size of all the code bases.
+    Appearance wise, Flutter and native seem to differentiate little to a majority
+    of users. It is able to mimic the native looks and behaviour to a certain point.
+    The biggest difference showed to be around the behaviour and animations of
+    the application where the difference was noticeable on items such as list, menu,
+    default spacing and font. Animations are however something that can be added
+    according their documentation[40] although it requires more of the developer
+    and application as it is not something that is accompanied by the default in
+    Flutter.
+    To conclude the answers and ideas of Flutter, it is a tool with a promising
+    feature if the community continue to grow in the direction that it is right now.
+    The line to drawn when to choose Flutter over two separate native builds, can
+    be chosen at the development of smaller to medium applications which are
+    more flexible. Considering that Flutters strong side is being a cross-platform
+    solution, Flutter still performs good on a single application base if compared to
+    native applications. Flutter may not beat native for developing applications at
+    this point but the results show good potential for the future although further
+    studies needs to be done in these areas to conclude safer answers.
+
+
 Project Structure:
 I will be separating my code into folders depending their use cases.
 Below are folder descriptions.
