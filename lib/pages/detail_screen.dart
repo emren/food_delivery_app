@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/models/food_provider.dart';
 import 'package:food_delivery_app/services/size_config.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -43,7 +44,16 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      if (!foodProvider
+                          .isFavorite(foodProvider.getFood(widget.name))) {
+                        foodProvider
+                            .addToFavorites(foodProvider.getFood(widget.name));
+                      } else {
+                        foodProvider.removeFromFavorites(
+                            foodProvider.getFood(widget.name));
+                      }
+                    },
                     child: Padding(
                       padding: EdgeInsets.only(
                           top: 0.89 * SizeConfig.heightMultiplier,
@@ -66,6 +76,64 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Container(
+                width: 80 * SizeConfig.widthMultiplier,
+                height: 30 * SizeConfig.heightMultiplier,
+                decoration: BoxDecoration(
+                    color: Color(0xffffffff),
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color(0x29000000),
+                          offset: Offset(0, 3),
+                          blurRadius: 6,
+                          spreadRadius: 0),
+                    ],
+                    image: DecorationImage(
+                        image: NetworkImage(
+                          foodProvider.getFood(widget.name).link,
+                        ),
+                        fit: BoxFit.cover)),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                widget.name,
+                style: GoogleFonts.titilliumWeb(
+                  textStyle: TextStyle(
+                      color: Colors.green[800],
+                      fontSize: 3 * SizeConfig.textMultiplier,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                foodProvider.getFood(widget.name).description,
+                style: GoogleFonts.titilliumWeb(
+                  textStyle: TextStyle(
+                      color: Colors.green[800],
+                      fontSize: 2 * SizeConfig.textMultiplier,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "₺ " + foodProvider.getFood(widget.name).price,
+                style: GoogleFonts.titilliumWeb(
+                  textStyle: TextStyle(
+                      color: Colors.green[800],
+                      fontSize: 5 * SizeConfig.textMultiplier,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ],
           ),
