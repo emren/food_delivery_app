@@ -10,12 +10,9 @@ class PizzaScreen extends StatefulWidget {
 }
 
 class _PizzaScreenState extends State<PizzaScreen> {
-
   @override
   Widget build(BuildContext context) {
-
     FoodProvider foodProvider = Provider.of<FoodProvider>(context);
-    //print(foodProvider.getPizzaList().toString());
 
     return SafeArea(
       child: Container(
@@ -29,26 +26,21 @@ class _PizzaScreenState extends State<PizzaScreen> {
                     right: 4.83 * SizeConfig.widthMultiplier,
                     left: 4.83 * SizeConfig.widthMultiplier),
                 child: GridView.count(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 25,
-                  mainAxisSpacing: 25,
-                  shrinkWrap: true,
-                  scrollDirection: Axis.vertical,
-                  childAspectRatio: 0.8,
-                  padding: EdgeInsets.only(
-                      top: 3.34 * SizeConfig.heightMultiplier,
-                      bottom: 3.34 * SizeConfig.heightMultiplier,
-                      left: 7.25 * SizeConfig.widthMultiplier,
-                      right: 7.25 * SizeConfig.widthMultiplier),
-                  children:
-                       List.generate(
-                      foodProvider.getPizzaList().length,
-                          (index) {
-                        return FoodCard(foodProvider.getPizzaList()[index]
-                            .name);
-                      })
-
-                ),
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 25,
+                    mainAxisSpacing: 25,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    childAspectRatio: 0.8,
+                    padding: EdgeInsets.only(
+                        top: 3.34 * SizeConfig.heightMultiplier,
+                        bottom: 3.34 * SizeConfig.heightMultiplier,
+                        left: 7.25 * SizeConfig.widthMultiplier,
+                        right: 7.25 * SizeConfig.widthMultiplier),
+                    children: List.generate(foodProvider.getPizzaList().length,
+                        (index) {
+                      return FoodCard(foodProvider.getPizzaList()[index].name);
+                    })),
               ),
             ),
           ],

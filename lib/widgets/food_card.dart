@@ -36,6 +36,9 @@ class FoodCard extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
+            SizedBox(
+              height: 1 * SizeConfig.heightMultiplier,
+            ),
             Container(
               height: 100,
               width: 100,
@@ -49,6 +52,13 @@ class FoodCard extends StatelessWidget {
                       fit: BoxFit.cover)),
             ),
             Text(name,
+                style: GoogleFonts.titilliumWeb(
+                  textStyle: TextStyle(
+                      color: Colors.green[800],
+                      fontSize: 2 * SizeConfig.textMultiplier,
+                      fontWeight: FontWeight.bold),
+                )),
+            Text("₺ "+foodProvider.getFood(name).price,
                 style: GoogleFonts.titilliumWeb(
                   textStyle: TextStyle(
                       color: Colors.green[800],
