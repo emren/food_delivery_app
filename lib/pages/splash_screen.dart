@@ -34,6 +34,7 @@ This will be a good place to load states and shared prefs.
   void didInitState() {
     FoodProvider foodProvider = Provider.of<FoodProvider>(context);
     foodProvider.initFoodList();
+    foodProvider.loadFavoriteFoods();
   }
 
   @override

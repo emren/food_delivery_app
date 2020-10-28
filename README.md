@@ -94,6 +94,11 @@ For this app there will be two models to hold state.
 Basket and favorite states will be passed down the widget tree.
 To do that I will use multiprovider at the main.dart file.
 
+DB:
+Regarding DB I am going to use shared preferences package.
+https://pub.dev/packages/shared_preferences
+Methods to load and save will be under FoodProvider to be able to notify listeners.
+
 Size Configuration:
 A Config file is under services folder. This will allow resize to different screensizes including tablets without losing design qualities.
 

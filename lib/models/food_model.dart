@@ -17,4 +17,13 @@ class FoodModel{
       link: parsedJson['link'],
     );
   }
+
+  Map<String, dynamic> toJson() => {
+    'type': type,
+    'name': name,
+    'description': description,
+    'price': price,
+    'link': link,
+  };
+
 }

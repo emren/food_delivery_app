@@ -53,6 +53,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         foodProvider.removeFromFavorites(
                             foodProvider.getFood(widget.name));
                       }
+                      foodProvider.saveFavoriteFoods(foodProvider.favoritesList);
                     },
                     child: Padding(
                       padding: EdgeInsets.only(

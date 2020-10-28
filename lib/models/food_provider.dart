@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'food_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:convert';
 
 class FoodProvider extends ChangeNotifier {
 
@@ -88,5 +90,31 @@ class FoodProvider extends ChangeNotifier {
       return true;
     }
     return false;
+  }
+
+  Future<List> loadFavoriteFoods() async {
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    List<String> foods = sharedPreferences.getStringList('favorites');
+    List<FoodModel> favorites = [];
+    if (foods != null) {
+      favorites = foods
+          .map((f) => FoodModel.fromJson(json.decode(f)))
+          .toList();
+    }
+    _favoritesList = favorites;
+    notifyListeners();
+    return favorites;
+  }
+
+  Future saveFavoriteFoods(List<FoodModel> list) async {
+    int count = list.length;
+    List<String> foods = list.map((f) => json.encode(f.toJson())).toList();
+    List<String> favorites = [];
+    print(foods);
+    for (var i = 0; i < count; i++) {
+      favorites.add(foods[i]);
+    }
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    await sharedPreferences.setStringList('favorites', favorites);
   }
 }
