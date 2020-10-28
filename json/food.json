@@ -124,5 +124,12 @@
     "desription": "bla bla",
     "price": "20",
     "link": "https://nutritioninthekitch.com/wp-content/uploads/2020/05/IMG_6942-720x540.jpg"
+  },
+  {
+    "type": "salad",
+    "name": "Potato Salad",
+    "desription": "bla bla",
+    "price": "20",
+    "link": "https://hips.hearstapps.com/hmg-prod/images/190411-potato-salad-horizontal-1-1555688422.png"
   }
 ]
