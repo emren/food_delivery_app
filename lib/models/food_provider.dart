@@ -4,7 +4,9 @@ import 'package:flutter/services.dart';
 import 'food_model.dart';
 
 class FoodProvider extends ChangeNotifier {
-  List<FoodModel> foodList = [];
+
+  List<FoodModel> _foodList = [];
+  List<FoodModel> _basketList = [];
 
   Future<String> loadFoodListJson() async {
     return await rootBundle.loadString('json/food.json');
@@ -18,8 +20,8 @@ class FoodProvider extends ChangeNotifier {
       mapper =
           List<FoodModel>.from(jsonResponse.map((i) => FoodModel.fromJson(i)));
     }
-    this.foodList = mapper;
-    return foodList;
+    this._foodList = mapper;
+    return _foodList;
   }
 
   void initFoodList() {
@@ -27,22 +29,39 @@ class FoodProvider extends ChangeNotifier {
   }
 
   List<FoodModel> getPizzaList(){
-    List list = foodList.where((i) => i.type == "pizza").toList();
+    List list = _foodList.where((i) => i.type == "pizza").toList();
     return list;
   }
 
   List<FoodModel> getSaladList(){
-    List list = foodList.where((i) => i.type == "salad").toList();
+    List list = _foodList.where((i) => i.type == "salad").toList();
     return list;
   }
 
   List<FoodModel> getDrinkList(){
-    List list = foodList.where((i) => i.type == "drink").toList();
+    List list = _foodList.where((i) => i.type == "drink").toList();
     return list;
   }
 
   FoodModel getFood(String name){
-    FoodModel food = foodList.firstWhere((i) => i.name == name,  orElse: () => null);
+    FoodModel food = _foodList.firstWhere((i) => i.name == name,  orElse: () => null);
     return food;
+  }
+
+  List get basketList => _basketList;
+
+  void addToBasket(FoodModel foodModel) {
+    _basketList.add(foodModel);
+    notifyListeners();
+  }
+
+  void removeFromBasket(FoodModel foodModel){
+    _basketList.remove(foodModel);
+    notifyListeners();
+  }
+
+  void clearBasket(){
+    _basketList.clear();
+    notifyListeners();
   }
 }
