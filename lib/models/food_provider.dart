@@ -7,6 +7,7 @@ class FoodProvider extends ChangeNotifier {
 
   List<FoodModel> _foodList = [];
   List<FoodModel> _basketList = [];
+  List<FoodModel> _favoritesList = [];
 
   Future<String> loadFoodListJson() async {
     return await rootBundle.loadString('json/food.json');
@@ -63,5 +64,29 @@ class FoodProvider extends ChangeNotifier {
   void clearBasket(){
     _basketList.clear();
     notifyListeners();
+  }
+
+  List get favoritesList => _favoritesList;
+
+  void addToFavorites(FoodModel foodModel) {
+    _favoritesList.add(foodModel);
+    notifyListeners();
+  }
+
+  void removeFromFavorites(FoodModel foodModel){
+    _favoritesList.remove(foodModel);
+    notifyListeners();
+  }
+
+  void clearFavorites(){
+    _favoritesList.clear();
+    notifyListeners();
+  }
+
+  bool isFavorite(FoodModel foodModel){
+    if(_favoritesList.contains(foodModel)){
+      return true;
+    }
+    return false;
   }
 }
