@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/models/food_provider.dart';
+import 'package:food_delivery_app/pages/detail_screen.dart';
 import 'package:food_delivery_app/services/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -15,10 +16,10 @@ class FoodCard extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => Detail(name)),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => DetailScreen(name)),
+        );
       },
       child: Container(
         width: 33.82 * SizeConfig.widthMultiplier,
