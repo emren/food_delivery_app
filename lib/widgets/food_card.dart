@@ -40,17 +40,23 @@ class FoodCard extends StatelessWidget {
             SizedBox(
               height: 1 * SizeConfig.heightMultiplier,
             ),
-            Container(
-              height: 100,
-              width: 100,
-              decoration: BoxDecoration(
-                  color: Colors.deepOrangeAccent,
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                      image: NetworkImage(
-                        foodProvider.getFood(name).link,
-                      ),
-                      fit: BoxFit.cover)),
+            /*
+            Hero tag will create our animation from foodscreens to detailscreen.
+             */
+            Hero(
+              tag: name,
+              child: Container(
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                    color: Colors.deepOrangeAccent,
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                        image: NetworkImage(
+                          foodProvider.getFood(name).link,
+                        ),
+                        fit: BoxFit.cover)),
+              ),
             ),
             Text(name,
                 style: GoogleFonts.titilliumWeb(

@@ -82,24 +82,27 @@ class _DetailScreenState extends State<DetailScreen> {
               SizedBox(
                 height: 30,
               ),
-              Container(
-                width: 80 * SizeConfig.widthMultiplier,
-                height: 30 * SizeConfig.heightMultiplier,
-                decoration: BoxDecoration(
-                    color: Color(0xffffffff),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Color(0x29000000),
-                          offset: Offset(0, 3),
-                          blurRadius: 6,
-                          spreadRadius: 0),
-                    ],
-                    image: DecorationImage(
-                        image: NetworkImage(
-                          foodProvider.getFood(widget.name).link,
-                        ),
-                        fit: BoxFit.cover)),
+              Hero(
+                tag: widget.name,
+                child: Container(
+                  width: 80 * SizeConfig.widthMultiplier,
+                  height: 30 * SizeConfig.heightMultiplier,
+                  decoration: BoxDecoration(
+                      color: Color(0xffffffff),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Color(0x29000000),
+                            offset: Offset(0, 3),
+                            blurRadius: 6,
+                            spreadRadius: 0),
+                      ],
+                      image: DecorationImage(
+                          image: NetworkImage(
+                            foodProvider.getFood(widget.name).link,
+                          ),
+                          fit: BoxFit.cover)),
+                ),
               ),
               SizedBox(
                 height: 30,
