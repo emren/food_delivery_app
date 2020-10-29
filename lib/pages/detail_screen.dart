@@ -275,6 +275,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
+                          foodProvider.addToBasket(foodProvider.getFood(widget.name));
                           Navigator.pop(context);
                         },
                         child: Container(
