@@ -53,7 +53,8 @@ class _DetailScreenState extends State<DetailScreen> {
                         foodProvider.removeFromFavorites(
                             foodProvider.getFood(widget.name));
                       }
-                      foodProvider.saveFavoriteFoods(foodProvider.favoritesList);
+                      foodProvider
+                          .saveFavoriteFoods(foodProvider.favoritesList);
                     },
                     child: Padding(
                       padding: EdgeInsets.only(
@@ -136,10 +137,102 @@ class _DetailScreenState extends State<DetailScreen> {
                       fontWeight: FontWeight.bold),
                 ),
               ),
+              GestureDetector(
+                onTap: () {
+                  _onBuyPressed();
+                },
+                child: Padding(
+                  padding:
+                      EdgeInsets.only(top: 2.23 * SizeConfig.heightMultiplier),
+                  child: Container(
+                    width: 60 * SizeConfig.widthMultiplier,
+                    height: 5.58 * SizeConfig.heightMultiplier,
+                    decoration: BoxDecoration(
+                      color: Colors.green[800],
+                      borderRadius: BorderRadius.circular(25),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Color(0x29000000),
+                            offset: Offset(0, 3),
+                            blurRadius: 6,
+                            spreadRadius: 0)
+                      ],
+                    ),
+                    child: Center(
+                      child: Text("Buy",
+                          style: TextStyle(
+                            fontFamily: 'SFProDisplay',
+                            color: Color(0xffffffff),
+                            fontSize: 2.68 * SizeConfig.textMultiplier,
+                            fontWeight: FontWeight.w900,
+                            fontStyle: FontStyle.normal,
+                          )),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  _onBuyPressed() {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return StatefulBuilder(
+            builder: (BuildContext context, StateSetter setState) {
+              return Container(
+                color: Color(0xFF737373),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Color(0xffffffff),
+                    borderRadius: BorderRadius.only(
+                      topLeft: const Radius.circular(20),
+                      topRight: const Radius.circular(20),
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          width: 60 * SizeConfig.widthMultiplier,
+                          height: 5.58 * SizeConfig.heightMultiplier,
+                          decoration: BoxDecoration(
+                            color: Colors.green[800],
+                            borderRadius: BorderRadius.circular(25),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Color(0x29000000),
+                                  offset: Offset(0, 3),
+                                  blurRadius: 6,
+                                  spreadRadius: 0)
+                            ],
+                          ),
+                          child: Center(
+                            child: Text("Buy",
+                                style: TextStyle(
+                                  fontFamily: 'SFProDisplay',
+                                  color: Color(0xffffffff),
+                                  fontSize: 2.68 * SizeConfig.textMultiplier,
+                                  fontWeight: FontWeight.w900,
+                                  fontStyle: FontStyle.normal,
+                                )),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
+          );
+        });
   }
 }
