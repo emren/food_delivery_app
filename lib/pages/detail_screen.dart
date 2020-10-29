@@ -182,6 +182,10 @@ class _DetailScreenState extends State<DetailScreen> {
     showModalBottomSheet(
         context: context,
         builder: (context) {
+          FoodProvider foodProvider = Provider.of<FoodProvider>(context);
+          int count = 0;
+          var price = int.parse(foodProvider.getFood(widget.name).price);
+
           return StatefulBuilder(
             builder: (BuildContext context, StateSetter setState) {
               return Container(
@@ -197,6 +201,75 @@ class _DetailScreenState extends State<DetailScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
+                      Text(
+                        'Items to order:',
+                        //foodProvider.getFood(widget.name).description,
+                        style: GoogleFonts.titilliumWeb(
+                          textStyle: TextStyle(
+                              color: Colors.green[800],
+                              fontSize: 2 * SizeConfig.textMultiplier,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                count = count + 1;
+                              });
+                            },
+                            child: Container(
+                              width: 24.15 * SizeConfig.widthMultiplier,
+                              height: 5.58 * SizeConfig.heightMultiplier,
+                              child: Icon(
+                                Icons.arrow_upward,
+                                color: Colors.green[800],
+                                size: 5 * SizeConfig.heightMultiplier,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            count.toString(),
+                            style: GoogleFonts.titilliumWeb(
+                              textStyle: TextStyle(
+                                  color: Colors.green[800],
+                                  fontSize: 5 * SizeConfig.textMultiplier,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                if (count > 0) {
+                                  count = count - 1;
+                                } else if (count <= 0) {
+                                  count = 0;
+                                }
+                              });
+                            },
+                            child: Container(
+                              width: 24.15 * SizeConfig.widthMultiplier,
+                              height: 5.58 * SizeConfig.heightMultiplier,
+                              child: Icon(
+                                Icons.arrow_downward,
+                                color: Colors.green[800],
+                                size: 5 * SizeConfig.heightMultiplier,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        "₺ " + (price * count).toString(),
+                        style: GoogleFonts.titilliumWeb(
+                          textStyle: TextStyle(
+                              color: Colors.green[800],
+                              fontSize: 5 * SizeConfig.textMultiplier,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
                       GestureDetector(
                         onTap: () {
                           Navigator.pop(context);
