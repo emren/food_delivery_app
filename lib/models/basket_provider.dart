@@ -6,18 +6,24 @@ class BasketProvider extends ChangeNotifier {
 
   List get basketList => _basketList;
 
+  int _totalAmount = 0;
+  int get totalAmount => _totalAmount;
+
   void addToBasket(BasketItemModel item) {
     _basketList.add(item);
+    _totalAmount += item.amount;
     notifyListeners();
   }
 
   void removeFromBasket(BasketItemModel item) {
     _basketList.remove(item);
+    _totalAmount -= item.amount;
     notifyListeners();
   }
 
   void clearBasket() {
     _basketList.clear();
+    _totalAmount = 0;
     notifyListeners();
   }
 }

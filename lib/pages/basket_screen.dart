@@ -61,12 +61,30 @@ class _BasketScreenState extends State<BasketScreen> {
             SizedBox(
               height: 10,
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Total ₺ : ' + basketProvider.totalAmount.toString(),
+                  style: GoogleFonts.titilliumWeb(
+                    textStyle: TextStyle(
+                        color: Colors.green[800],
+                        fontSize: 4 * SizeConfig.textMultiplier,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
             ListView.builder(
-                shrinkWrap: true,
-                itemCount: basketProvider.basketList.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return BasketCard(index);
-                }),
+              shrinkWrap: true,
+              itemCount: basketProvider.basketList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return BasketCard(index);
+              },
+            ),
           ],
         ),
       ),
