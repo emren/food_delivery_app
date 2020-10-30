@@ -189,7 +189,7 @@ class _DetailScreenState extends State<DetailScreen> {
         builder: (context) {
           FoodProvider foodProvider = Provider.of<FoodProvider>(context);
           BasketProvider basketProvider = Provider.of<BasketProvider>(context);
-          int count = 0;
+          int count = 1;
           var price = int.parse(foodProvider.getFood(widget.name).price);
 
           return StatefulBuilder(
@@ -247,10 +247,10 @@ class _DetailScreenState extends State<DetailScreen> {
                           GestureDetector(
                             onTap: () {
                               setState(() {
-                                if (count > 0) {
+                                if (count > 1) {
                                   count = count - 1;
-                                } else if (count <= 0) {
-                                  count = 0;
+                                } else if (count <= 1) {
+                                  count = 1;
                                 }
                               });
                             },
