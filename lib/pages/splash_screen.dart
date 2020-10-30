@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:after_init/after_init.dart';
 import 'package:food_delivery_app/models/food_provider.dart';
+import 'package:food_delivery_app/services/api_service.dart';
 import 'package:food_delivery_app/services/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -33,8 +34,13 @@ This will be a good place to load states and shared prefs.
   @override
   void didInitState() {
     FoodProvider foodProvider = Provider.of<FoodProvider>(context);
-    foodProvider.initFoodList();
+    //foodProvider.initFoodList();
     foodProvider.loadFavoriteFoods();
+
+    ApiService service = ApiService(context: context);
+    service.takeData('pizzas');
+    service.takeData('salads');
+    service.takeData('drinks');
   }
 
   @override
