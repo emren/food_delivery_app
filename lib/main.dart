@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/models/basket_provider.dart';
 import 'package:food_delivery_app/pages/splash_screen.dart';
 import 'package:food_delivery_app/services/size_config.dart';
 import 'package:flutter/services.dart';
@@ -25,6 +26,9 @@ class MyApp extends StatelessWidget {
               providers: [
                 ChangeNotifierProvider(
                   create: (context) => FoodProvider(),
+                ),
+                ChangeNotifierProvider(
+                  create: (context) => BasketProvider(),
                 ),
               ],
               child: MaterialApp(

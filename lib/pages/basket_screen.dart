@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/models/basket_provider.dart';
 import 'package:food_delivery_app/models/food_provider.dart';
 import 'package:food_delivery_app/services/size_config.dart';
+import 'package:food_delivery_app/widgets/basket_card.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class BasketScreen extends StatefulWidget {
@@ -11,18 +14,17 @@ class BasketScreen extends StatefulWidget {
 class _BasketScreenState extends State<BasketScreen> {
   @override
   Widget build(BuildContext context) {
-    FoodProvider foodProvider = Provider.of<FoodProvider>(context);
+    BasketProvider basketProvider = Provider.of<BasketProvider>(context);
 
     return SafeArea(
       child: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: ListView(
-
           children: [
             GestureDetector(
               onTap: () {
-                foodProvider.clearBasket();
+                basketProvider.clearBasket();
               },
               child: Padding(
                 padding:
@@ -61,11 +63,9 @@ class _BasketScreenState extends State<BasketScreen> {
             ),
             ListView.builder(
                 shrinkWrap: true,
-                itemCount: foodProvider.basketList.length,
+                itemCount: basketProvider.basketList.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return ListTile(
-                    title: Text(foodProvider.basketList[index].name),
-                  );
+                  return BasketCard(index);
                 }),
           ],
         ),

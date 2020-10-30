@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/models/basket_item_model.dart';
+import 'package:food_delivery_app/models/basket_provider.dart';
 import 'package:food_delivery_app/models/food_provider.dart';
 import 'package:food_delivery_app/services/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -186,6 +188,7 @@ class _DetailScreenState extends State<DetailScreen> {
         context: context,
         builder: (context) {
           FoodProvider foodProvider = Provider.of<FoodProvider>(context);
+          BasketProvider basketProvider = Provider.of<BasketProvider>(context);
           int count = 0;
           var price = int.parse(foodProvider.getFood(widget.name).price);
 
@@ -206,7 +209,6 @@ class _DetailScreenState extends State<DetailScreen> {
                     children: <Widget>[
                       Text(
                         'Items to order:',
-                        //foodProvider.getFood(widget.name).description,
                         style: GoogleFonts.titilliumWeb(
                           textStyle: TextStyle(
                               color: Colors.green[800],
@@ -275,7 +277,11 @@ class _DetailScreenState extends State<DetailScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          foodProvider.addToBasket(foodProvider.getFood(widget.name));
+                          BasketItemModel item = BasketItemModel(
+                              model: foodProvider.getFood(widget.name),
+                              quantity: count,
+                              amount: count * price);
+                          basketProvider.addToBasket(item);
                           Navigator.pop(context);
                         },
                         child: Container(
