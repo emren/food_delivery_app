@@ -79,6 +79,7 @@ class FoodProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+
   bool isFavorite(FoodModel foodModel) {
     if (_favoritesList.contains(foodModel)) {
       return true;
