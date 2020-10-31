@@ -79,12 +79,32 @@ Below are folder descriptions.
     Any tool or service related things go here.
     Backend services, size configurations, http etc.
 
-    unused folder:
-    Dead code
-
     widgets folder:
     Custom made widgets go here.
     These widgets will be used by files at the pages folder.
+
+Packages Used:
+
+    Provider
+    For state management
+
+    After_init
+    After init adds didinit method which comes after init and before widget build just once.
+    Here context can be passed therefore it is best used with Provider to init states.
+
+    Google_fonts
+    App uses fonts from this library
+
+    Shared_preferences
+    To save and read data to the phone cache
+
+    Http
+    To make http calls to api
+
+    Equatable
+    To make object comparison at the hash level.
+    Favorites objects that are loaded from prefs needed to be compared to newly created objects.
+
 
 State Management:
 For the state management I am going to use Provider package.
@@ -107,6 +127,7 @@ I could not find any free food api so I wrote my own on Node Js using
 https://www.npmjs.com/package/json-server Json Server package at npm.
 The app currently is set to use the this server which can be found at my
 github https://github.com/emren/fake-server-for-food_delivery-app
+Just type npm run server to start the server on Localhost.
 
 But if you want to use it without the server you can do it with the
 embedded food.json file. To do that just uncomment the methods at FoodProvider.
