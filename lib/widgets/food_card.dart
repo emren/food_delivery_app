@@ -36,6 +36,7 @@ class FoodCard extends StatelessWidget {
           ],
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(
               height: 2 * SizeConfig.heightMultiplier,
@@ -58,6 +59,9 @@ class FoodCard extends StatelessWidget {
                         fit: BoxFit.cover)),
               ),
             ),
+            SizedBox(
+              height: 2 * SizeConfig.heightMultiplier,
+            ),
             Text(name,
                 style: GoogleFonts.titilliumWeb(
                   textStyle: TextStyle(
@@ -65,6 +69,9 @@ class FoodCard extends StatelessWidget {
                       fontSize: 2 * SizeConfig.textMultiplier,
                       fontWeight: FontWeight.bold),
                 )),
+            SizedBox(
+              height: 2 * SizeConfig.heightMultiplier,
+            ),
             Text("\$ "+foodProvider.getFood(name).price,
                 style: GoogleFonts.titilliumWeb(
                   textStyle: TextStyle(

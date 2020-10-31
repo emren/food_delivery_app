@@ -80,8 +80,11 @@ gives the user to choose different food categories as well as favorite and baske
 Category screens list food cards with pictures and with minimal detail.
 On users press to the cards a detail screen will open with a transition animation where the user
 can add the food to his basket or add it to his favorites list. The way to add to the
-favorites list to press the sign star at the top right of the detail screen.
-Basketscreen has clear basket option and shows the total basket value.
+favorites list is to press the sign star at the top right of the detail screen.
+At the detail screen a seperate order form is provided with a modalbottomsheet and user is asked
+to choose order quantity. Depending the quantity the price will change.
+Basketscreen has clear basket option and shows the total basket value. User can delete items
+in basket by swiping any side. This will pop up a confirm dialog.
 Favoritesscreen as well has clear favorites option.
 
 
