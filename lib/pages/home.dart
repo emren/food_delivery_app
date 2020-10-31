@@ -5,6 +5,7 @@ import 'package:food_delivery_app/pages/favorites_screen.dart';
 import 'package:food_delivery_app/pages/pizza_screen.dart';
 import 'package:food_delivery_app/pages/salad_screen.dart';
 import 'package:food_delivery_app/services/size_config.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -38,6 +39,19 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
+      appBar: AppBar(
+        title: Text(
+          'FOOD DELIVERY APP',
+          style: GoogleFonts.hennyPenny(
+            textStyle: TextStyle(
+                color: Colors.green[300],
+                fontSize: 3 * SizeConfig.textMultiplier,
+                fontWeight: FontWeight.bold),
+          ),
+        ),
+        backgroundColor: Colors.deepOrangeAccent,
+        automaticallyImplyLeading: false,
+      ),
       body: _children[_currentindex],
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(

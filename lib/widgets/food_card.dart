@@ -39,7 +39,7 @@ class FoodCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(
-              height: 2 * SizeConfig.heightMultiplier,
+              height: 1 * SizeConfig.heightMultiplier,
             ),
             /*
             Hero tag will create our animation from foodscreens to detailscreen.
@@ -47,7 +47,7 @@ class FoodCard extends StatelessWidget {
             Hero(
               tag: name,
               child: Container(
-                height: 10.8 * SizeConfig.heightMultiplier,
+                height: 10 * SizeConfig.heightMultiplier,
                 width: 23.36 * SizeConfig.widthMultiplier,
                 decoration: BoxDecoration(
                     color: Colors.deepOrangeAccent,
@@ -60,7 +60,7 @@ class FoodCard extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 2 * SizeConfig.heightMultiplier,
+              height: 1 * SizeConfig.heightMultiplier,
             ),
             Text(name,
                 style: GoogleFonts.titilliumWeb(
@@ -70,7 +70,7 @@ class FoodCard extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 )),
             SizedBox(
-              height: 2 * SizeConfig.heightMultiplier,
+              height: 1 * SizeConfig.heightMultiplier,
             ),
             Text("\$ "+foodProvider.getFood(name).price,
                 style: GoogleFonts.titilliumWeb(
