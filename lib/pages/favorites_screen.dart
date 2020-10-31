@@ -21,6 +21,42 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
         height: MediaQuery.of(context).size.height,
         child: Column(
           children: [
+            GestureDetector(
+              onTap: () {
+                foodProvider.clearFavorites();
+              },
+              child: Padding(
+                padding:
+                EdgeInsets.only(top: 2.23 * SizeConfig.heightMultiplier),
+                child: Container(
+                  width: 100 * SizeConfig.widthMultiplier,
+                  height: 5.58 * SizeConfig.heightMultiplier,
+                  decoration: BoxDecoration(
+                    color: Colors.green[800],
+                    borderRadius: BorderRadius.circular(25),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color(0x29000000),
+                          offset: Offset(0, 3),
+                          blurRadius: 6,
+                          spreadRadius: 0)
+                    ],
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Clean Favorites",
+                      style: TextStyle(
+                        fontFamily: 'SFProDisplay',
+                        color: Color(0xffffffff),
+                        fontSize: 2 * SizeConfig.textMultiplier,
+                        fontWeight: FontWeight.w900,
+                        fontStyle: FontStyle.normal,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
             Flexible(
               child: Padding(
                 padding: EdgeInsets.only(

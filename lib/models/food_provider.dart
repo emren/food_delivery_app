@@ -76,9 +76,9 @@ class FoodProvider extends ChangeNotifier {
 
   void clearFavorites() {
     _favoritesList.clear();
+    saveFavoriteFoods(_favoritesList);
     notifyListeners();
   }
-
 
   bool isFavorite(FoodModel foodModel) {
     if (_favoritesList.contains(foodModel)) {
