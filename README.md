@@ -7,6 +7,8 @@ I am choosing Flutter due to the higher native like performance over other cross
 This performance edge comes from the fact that unlike React, Flutter compiles into native code.
 React uses bridge to native code.
 Also Flutter uses Skia Graphics Library which gives 60 frames per second therefore Flutter UI is very fast and smooth.
+Both React and Flutter have hotreload ability which increases productivity.
+
 
 Flutter vs React:
 The papers below linked find very close performances and no significant difference between Flutter and React.
@@ -62,6 +64,25 @@ Conclusion part of the study is below which you can find also on page 37;
     native applications. Flutter may not beat native for developing applications at
     this point but the results show good potential for the future although further
     studies needs to be done in these areas to conclude safer answers.
+
+
+Dart vs Native:
+As a former Java developer I find the syntax of Dart and Java very similar.
+But Dart is a more modern language and is less verbose than Java. Hotreload
+is a time saver when compared to compiling.
+
+Design:
+As a freelancer I am used to work with designers and reveive xd files to implement it
+pixel by pixel. In this project I was provided none so I tried to make the design
+as minimalistic as I can and focused more on clean code.
+The App has a splashscreen and then lands to the main page where a bottomnavigationbar
+gives the user to choose different food categories as well as favorite and basket screen access.
+Category screens list food cards with pictures and with minimal detail.
+On users press to the cards a detail screen will open with a transition animation where the user
+can add the food to his basket or add it to his favorites list. The way to add to the
+favorites list to press the sign star at the top right of the detail screen.
+Basketscreen has clear basket option and shows the total basket value.
+Favoritesscreen as well has clear favorites option.
 
 
 Project Structure:

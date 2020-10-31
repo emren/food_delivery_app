@@ -65,7 +65,7 @@ class FoodCard extends StatelessWidget {
                       fontSize: 2 * SizeConfig.textMultiplier,
                       fontWeight: FontWeight.bold),
                 )),
-            Text("₺ "+foodProvider.getFood(name).price,
+            Text("\$ "+foodProvider.getFood(name).price,
                 style: GoogleFonts.titilliumWeb(
                   textStyle: TextStyle(
                       color: Colors.green[800],

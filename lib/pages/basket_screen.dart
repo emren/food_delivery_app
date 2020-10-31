@@ -65,7 +65,7 @@ class _BasketScreenState extends State<BasketScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Total ₺ : ' + basketProvider.totalAmount.toString(),
+                  'Total \$ : ' + basketProvider.totalAmount.toString(),
                   style: GoogleFonts.titilliumWeb(
                     textStyle: TextStyle(
                         color: Colors.green[800],

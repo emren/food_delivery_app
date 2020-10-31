@@ -120,7 +120,7 @@ class BasketCard extends StatelessWidget {
                 ),
               ),
               Text(
-                "₺ " + basketProvider.basketList[index].amount.toString(),
+                "\$ " + basketProvider.basketList[index].amount.toString(),
                 style: GoogleFonts.titilliumWeb(
                   textStyle: TextStyle(
                       color: Colors.green[800],

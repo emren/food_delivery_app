@@ -134,7 +134,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 height: 3.24 * SizeConfig.heightMultiplier
               ),
               Text(
-                "₺ " + foodProvider.getFood(widget.name).price,
+                "\$ " + foodProvider.getFood(widget.name).price,
                 style: GoogleFonts.titilliumWeb(
                   textStyle: TextStyle(
                       color: Colors.green[800],
@@ -267,7 +267,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         ],
                       ),
                       Text(
-                        "₺ " + (price * count).toString(),
+                        "\$ " + (price * count).toString(),
                         style: GoogleFonts.titilliumWeb(
                           textStyle: TextStyle(
                               color: Colors.green[800],
