@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/pages/basket_screen.dart';
 import 'package:food_delivery_app/pages/drinks_screen.dart';
@@ -38,7 +37,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //endDrawer: CustomDrawer(),
       backgroundColor: Colors.grey[200],
       body: _children[_currentindex],
       bottomNavigationBar: ClipRRect(
@@ -53,15 +51,13 @@ class _HomeState extends State<Home> {
               icon: IconButton(
                 icon: _isPizzaSelected
                     ? Image.asset(
-                  'assets/pizza_black.png',
-                  //height: 30,
-                  height: 3.35 * SizeConfig.heightMultiplier,
-                )
+                        'assets/pizza_black.png',
+                        height: 3.35 * SizeConfig.heightMultiplier,
+                      )
                     : Image.asset(
-                  'assets/pizza_white.png',
-                  //height: 30,
-                  height: 3.35 * SizeConfig.heightMultiplier,
-                ),
+                        'assets/pizza_white.png',
+                        height: 3.35 * SizeConfig.heightMultiplier,
+                      ),
                 onPressed: () {
                   setState(() {
                     _currentindex = 0;
@@ -73,26 +69,24 @@ class _HomeState extends State<Home> {
                   });
                 },
               ),
-              //label: 'Pizza',
-
               title: Text(
                 'Pizza',
-                style: TextStyle(height: 2, color: Colors.black),
+                style: TextStyle(
+                    height: 0.21 * SizeConfig.heightMultiplier,
+                    color: Colors.black),
               ),
             ),
             BottomNavigationBarItem(
               icon: IconButton(
                 icon: _isSaladSelected
                     ? Image.asset(
-                  'assets/salad_black.png',
-                  //height: 30,
-                  height: 3.35 * SizeConfig.heightMultiplier,
-                )
+                        'assets/salad_black.png',
+                        height: 3.35 * SizeConfig.heightMultiplier,
+                      )
                     : Image.asset(
-                  'assets/salad_white.png',
-                  //height: 30,
-                  height: 3.35 * SizeConfig.heightMultiplier,
-                ),
+                        'assets/salad_white.png',
+                        height: 3.35 * SizeConfig.heightMultiplier,
+                      ),
                 onPressed: () {
                   setState(() {
                     _currentindex = 1;
@@ -104,25 +98,25 @@ class _HomeState extends State<Home> {
                   });
                 },
               ),
-              //label: 'Salad',
               title: Text(
                 'Salad',
-                style: TextStyle(height: 2, color: Colors.black),
+                style: TextStyle(
+                    height: 0.21 * SizeConfig.heightMultiplier,
+                    color: Colors.black),
               ),
             ),
             BottomNavigationBarItem(
               icon: IconButton(
                 icon: _isDrinkSelected
                     ? Image.asset(
-                  'assets/drink_black.png',
-                  //height: 30,
-                  height: 3.35 * SizeConfig.heightMultiplier,
-                )
+                        'assets/drink_black.png',
+                        height: 3.35 * SizeConfig.heightMultiplier,
+                      )
                     : Image.asset(
-                  'assets/drink_white.png',
-                  //height: 30,
-                  height: 3.35 * SizeConfig.heightMultiplier,
-                ),
+                        'assets/drink_white.png',
+                        //height: 30,
+                        height: 3.35 * SizeConfig.heightMultiplier,
+                      ),
                 onPressed: () {
                   setState(() {
                     _currentindex = 2;
@@ -134,25 +128,24 @@ class _HomeState extends State<Home> {
                   });
                 },
               ),
-              //label: 'Drink',
               title: Text(
                 'Drink',
-                style: TextStyle(height: 2, color: Colors.black),
+                style: TextStyle(
+                    height: 0.21 * SizeConfig.heightMultiplier,
+                    color: Colors.black),
               ),
             ),
             BottomNavigationBarItem(
               icon: IconButton(
                 icon: _isFavoritesSelected
                     ? Image.asset(
-                  'assets/fav_black.png',
-                  //height: 30,
-                  height: 3.35 * SizeConfig.heightMultiplier,
-                )
+                        'assets/fav_black.png',
+                        height: 3.35 * SizeConfig.heightMultiplier,
+                      )
                     : Image.asset(
-                  'assets/fav_white.png',
-                  //height: 30,
-                  height: 3.35 * SizeConfig.heightMultiplier,
-                ),
+                        'assets/fav_white.png',
+                        height: 3.35 * SizeConfig.heightMultiplier,
+                      ),
                 onPressed: () {
                   setState(() {
                     _currentindex = 3;
@@ -164,25 +157,24 @@ class _HomeState extends State<Home> {
                   });
                 },
               ),
-              //label: 'Favs',
               title: Text(
                 'Favs',
-                style: TextStyle(height: 2, color: Colors.black),
+                style: TextStyle(
+                    height: 0.21 * SizeConfig.heightMultiplier,
+                    color: Colors.black),
               ),
             ),
             BottomNavigationBarItem(
               icon: IconButton(
                 icon: _isBasketSelected
                     ? Image.asset(
-                  'assets/bag_black.png',
-                  //height: 30,
-                  height: 3.35 * SizeConfig.heightMultiplier,
-                )
+                        'assets/bag_black.png',
+                        height: 3.35 * SizeConfig.heightMultiplier,
+                      )
                     : Image.asset(
-                  'assets/bag_white.png',
-                  //height: 30,
-                  height: 3.35 * SizeConfig.heightMultiplier,
-                ),
+                        'assets/bag_white.png',
+                        height: 3.35 * SizeConfig.heightMultiplier,
+                      ),
                 onPressed: () {
                   setState(() {
                     _currentindex = 4;
@@ -194,11 +186,11 @@ class _HomeState extends State<Home> {
                   });
                 },
               ),
-              //label: 'Basket',
-
               title: Text(
                 'Basket',
-                style: TextStyle(height: 2, color: Colors.black),
+                style: TextStyle(
+                    height: 0.21 * SizeConfig.heightMultiplier,
+                    color: Colors.black),
               ),
             ),
           ],

@@ -56,8 +56,8 @@ This will be a good place to load states and shared prefs.
               height: 16.75 * SizeConfig.heightMultiplier,
             ),
             Container(
-              height: 400,
-              width: 400,
+              height: 43.19 * SizeConfig.heightMultiplier,
+              width: 93.45 * SizeConfig.widthMultiplier,
               decoration: BoxDecoration(
                   color: Colors.deepOrangeAccent, shape: BoxShape.circle),
               child: Center(

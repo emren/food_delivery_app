@@ -78,10 +78,14 @@ class BasketCard extends StatelessWidget {
       },
       child: ListTile(
         leading: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.only(
+              top: 0.86 * SizeConfig.heightMultiplier,
+              bottom: 0.86 * SizeConfig.heightMultiplier,
+              left: 1.87 * SizeConfig.widthMultiplier,
+              right: 1.87 * SizeConfig.widthMultiplier),
           child: Container(
-            height: 50,
-            width: 50,
+            height: 5.4 * SizeConfig.heightMultiplier,
+            width: 11.68 * SizeConfig.widthMultiplier,
             decoration: BoxDecoration(
                 color: Colors.deepOrangeAccent,
                 shape: BoxShape.circle,
@@ -101,8 +105,8 @@ class BasketCard extends StatelessWidget {
           ),
         ),
         trailing: Container(
-          width: 100,
-          height: 50,
+          width: 23.36 * SizeConfig.widthMultiplier,
+          height: 5.4 * SizeConfig.heightMultiplier,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

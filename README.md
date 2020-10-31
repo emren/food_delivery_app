@@ -102,6 +102,18 @@ Methods to load and save will be under FoodProvider to be able to notify listene
 Size Configuration:
 A Config file is under services folder. This will allow resize to different screensizes including tablets without losing design qualities.
 
+Api:
+I could not find any free food api so I wrote my own on Node Js using
+https://www.npmjs.com/package/json-server Json Server package at npm.
+The app currently is set to use the this server which can be found at my
+github https://github.com/emren/fake-server-for-food_delivery-app
+
+But if you want to use it without the server you can do it with the
+embedded food.json file. To do that just uncomment the methods at FoodProvider.
+Also you need to uncomment the foodProvider.initFoodList() method at the
+Splashscreen. You should as well comment the service.takeData methods at
+Splashscreen to avoid conflict.
+
 Icons:
 Icons are used from the following links
 <a target="_blank" href="https://icons8.com/icons/set/pizza">Pizza icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>

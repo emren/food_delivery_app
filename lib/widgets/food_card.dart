@@ -38,7 +38,7 @@ class FoodCard extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 1 * SizeConfig.heightMultiplier,
+              height: 2 * SizeConfig.heightMultiplier,
             ),
             /*
             Hero tag will create our animation from foodscreens to detailscreen.
@@ -46,8 +46,8 @@ class FoodCard extends StatelessWidget {
             Hero(
               tag: name,
               child: Container(
-                height: 100,
-                width: 100,
+                height: 10.8 * SizeConfig.heightMultiplier,
+                width: 23.36 * SizeConfig.widthMultiplier,
                 decoration: BoxDecoration(
                     color: Colors.deepOrangeAccent,
                     shape: BoxShape.circle,

@@ -59,7 +59,7 @@ class _BasketScreenState extends State<BasketScreen> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 1.07 * SizeConfig.heightMultiplier,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +76,7 @@ class _BasketScreenState extends State<BasketScreen> {
               ],
             ),
             SizedBox(
-              height: 10,
+              height: 1.07 * SizeConfig.heightMultiplier,
             ),
             ListView.builder(
               shrinkWrap: true,

@@ -82,7 +82,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: 3.24 * SizeConfig.heightMultiplier,
               ),
               Hero(
                 tag: widget.name,
@@ -107,7 +107,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 3.24 * SizeConfig.heightMultiplier,
               ),
               Text(
                 widget.name,
@@ -119,7 +119,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 3.24 * SizeConfig.heightMultiplier,
               ),
               Text(
                 foodProvider.getFood(widget.name).description,
@@ -131,7 +131,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 3.24 * SizeConfig.heightMultiplier
               ),
               Text(
                 "₺ " + foodProvider.getFood(widget.name).price,
