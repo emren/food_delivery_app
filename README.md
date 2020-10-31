@@ -65,6 +65,12 @@ Conclusion part of the study is below which you can find also on page 37;
     this point but the results show good potential for the future although further
     studies needs to be done in these areas to conclude safer answers.
 
+A potential drawback for Flutter against Native is Flutter as a tool is very new,
+thus there may be need to native implementation at some point. Although pub dev,
+https://pub.dev/ the package site is growing every day, and new packages coming,
+still there may be a point where Flutter widgets or packages does not meet client
+requirement and native calls has to be implemented.
+
 
 Dart vs Native:
 As a former Java developer I find the syntax of Dart and Java very similar.
@@ -72,7 +78,7 @@ But Dart is a more modern language and is less verbose than Java. Hotreload
 is a time saver when compared to compiling.
 
 Design:
-As a freelancer I am used to work with designers and reveive xd files to implement it
+As a freelancer I am used to work with designers and receive xd files to implement it
 pixel by pixel. In this project I was provided none so I tried to make the design
 as minimalistic as I can and focused more on clean code.
 The App has a splashscreen and then lands to the main page where a bottomnavigationbar
