@@ -87,6 +87,12 @@ Basketscreen has clear basket option and shows the total basket value. User can 
 in basket by swiping any side. This will pop up a confirm dialog.
 Favoritesscreen as well has clear favorites option.
 
+This Apps design is adaptive to different screensizes including tablets.
+To achieve adaption without losing any design qualities I implemented
+a SizeConfig file which can be found under services folder. Any width and height
+is implemented with the original designs multiplier. Therefore if screen gets bigger,
+widgets, text, images get bigger too.
+
 Api:
 I could not find any free food api so I wrote my own on Node Js using
 https://www.npmjs.com/package/json-server Json Server package at npm.
@@ -95,7 +101,7 @@ github https://github.com/emren/fake-server-for-food_delivery-app
 Just type npm run server to start the server on Localhost.
 
 But if you want to use it without the server you can do it with the
-embedded food.json file. To do that just uncomment the methods at FoodProvider.
+embedded json/food.json file. To do that just uncomment the methods at FoodProvider.
 Also you need to uncomment the foodProvider.initFoodList() method at the
 Splashscreen. You should as well comment the service.takeData methods at
 Splashscreen to avoid conflict.
@@ -155,10 +161,6 @@ DB:
 Regarding DB I am going to use shared preferences package.
 https://pub.dev/packages/shared_preferences
 Methods to load and save will be under FoodProvider to be able to notify listeners.
-
-Size Configuration:
-A Config file is under services folder. This will allow resize to different screensizes including tablets without losing design qualities.
-
 
 
 Icons:
