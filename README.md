@@ -83,6 +83,7 @@ pixel by pixel. In this project I was provided none so I tried to make the desig
 as minimalistic as I can and focused more on clean code.
 The App has a splashscreen and then lands to the main page where a bottomnavigationbar
 gives the user to choose different food categories as well as favorite and basket screen access.
+Additionally the drawer lists all categories and routes to according category.
 Category screens list food cards with pictures and with minimal detail.
 On users press to the cards a detail screen will open with a transition animation where the user
 can add the food to his basket or add it to his favorites list. The way to add to the
@@ -172,15 +173,18 @@ What could be improved:
 This is an open end question when it comes to coding but I feel the following
 can be the most important areas to improve int this app:
 1) Design:
+A good design is what sells an app and this app can use more design ideas.
 2) Backend:
 Current backend is serving a json with url links to images. If had time I could try
 to write a node js server which serves images instead of urls thus making the app
 downloading the images at the splahscreen and holding those at state.
-This would solve the picture loading phase at catogories pages and it would
+This would solve the picture loading phase at categories pages and it would
 improve user experience.
 3) Animations:
+Additional animations can be implemented
 4) IOS style:
-
+This app is build on Materialapp. To give more ios feeling Cupertinoapp can be implemented
+where necessary and according the device its running app can show either material or cupertino widgets.
 
 Icons:
 Icons are used from the following links
