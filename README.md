@@ -168,6 +168,19 @@ Regarding DB I am going to use shared preferences package.
 https://pub.dev/packages/shared_preferences
 Methods to load and save will be under FoodProvider to be able to notify listeners.
 
+What could be improved:
+This is an open end question when it comes to coding but I feel the following
+can be the most important areas to improve int this app:
+1) Design:
+2) Backend:
+Current backend is serving a json with url links to images. If had time I could try
+to write a node js server which serves images instead of urls thus making the app
+downloading the images at the splahscreen and holding those at state.
+This would solve the picture loading phase at catogories pages and it would
+improve user experience.
+3) Animations:
+4) IOS style:
+
 
 Icons:
 Icons are used from the following links
