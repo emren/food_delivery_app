@@ -188,6 +188,13 @@ Additional animations can be implemented
 This app is build on Materialapp. To give it a more ios feeling Cupertinoapp can be implemented
 where necessary and depending the device where the app is running, app can show either material or cupertino widgets.
 
+Technical challenges encountered:
+For the Drawer I tried two packages. The first one https://pub.dev/packages/curved_drawer
+was not working due to a known issue https://github.com/undrbridge/curved_drawer/issues/1
+The second package worked well https://pub.dev/packages/wave_drawer
+This points to my previous claim that although Flutter is in production since 2 years and has a very stable and rich
+widget library in its own framework, outside packages space is relatively new and needs time to mature.
+
 Icons:
 Icons are used from the following links
 <a target="_blank" href="https://icons8.com/icons/set/pizza">Pizza icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
