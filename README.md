@@ -193,7 +193,8 @@ For the Drawer I tried two packages. The first one https://pub.dev/packages/curv
 was not working due to a known issue https://github.com/undrbridge/curved_drawer/issues/1
 The second package worked well https://pub.dev/packages/wave_drawer
 This points to my previous claim that although Flutter is in production since 2 years and has a very stable and rich
-widget library in its own framework, outside packages space is relatively new and needs time to mature.
+widget library in its own framework, but outside packages space https://pub.dev/ is relatively new and needs time to mature.
+
 
 Icons:
 Icons are used from the following links
