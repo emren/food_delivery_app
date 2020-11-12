@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/models/food_provider.dart';
-import 'package:food_delivery_app/services/size_config.dart';
-import 'package:food_delivery_app/widgets/food_card.dart';
+import 'package:food_delivery_app/controls/food_provider.dart';
+import 'package:food_delivery_app/util/size_config.dart';
+import 'package:food_delivery_app/views/widgets/food_card.dart';
 import 'package:provider/provider.dart';
 
-class SaladScreen extends StatefulWidget {
+class PizzaScreen extends StatefulWidget {
   @override
-  _SaladScreenState createState() => _SaladScreenState();
+  _PizzaScreenState createState() => _PizzaScreenState();
 }
 
-class _SaladScreenState extends State<SaladScreen> {
+class _PizzaScreenState extends State<PizzaScreen> {
   @override
   Widget build(BuildContext context) {
     FoodProvider foodProvider = Provider.of<FoodProvider>(context);
@@ -37,9 +37,9 @@ class _SaladScreenState extends State<SaladScreen> {
                         bottom: 3.34 * SizeConfig.heightMultiplier,
                         left: 7.25 * SizeConfig.widthMultiplier,
                         right: 7.25 * SizeConfig.widthMultiplier),
-                    children: List.generate(foodProvider.getSaladList().length,
+                    children: List.generate(foodProvider.getPizzaList().length,
                         (index) {
-                      return FoodCard(foodProvider.getSaladList()[index].name);
+                      return FoodCard(foodProvider.getPizzaList()[index].name);
                     })),
               ),
             ),

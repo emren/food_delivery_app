@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/pages/basket_screen.dart';
-import 'package:food_delivery_app/pages/drinks_screen.dart';
-import 'package:food_delivery_app/pages/favorites_screen.dart';
-import 'package:food_delivery_app/pages/pizza_screen.dart';
-import 'package:food_delivery_app/pages/salad_screen.dart';
-import 'package:food_delivery_app/services/size_config.dart';
+import 'package:food_delivery_app/views/pages/basket_screen.dart';
+import 'package:food_delivery_app/views/pages/drinks_screen.dart';
+import 'package:food_delivery_app/views/pages/favorites_screen.dart';
+import 'package:food_delivery_app/views/pages/pizza_screen.dart';
+import 'package:food_delivery_app/views/pages/salad_screen.dart';
+import 'package:food_delivery_app/util/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wave_drawer/wave_drawer.dart';
 
@@ -109,6 +109,7 @@ class _HomeState extends State<Home> {
                   _isFavoritesSelected = false;
                   _isBasketSelected = false;
                 });
+                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -139,6 +140,7 @@ class _HomeState extends State<Home> {
                   _isFavoritesSelected = false;
                   _isBasketSelected = false;
                 });
+                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -169,6 +171,7 @@ class _HomeState extends State<Home> {
                   _isFavoritesSelected = false;
                   _isBasketSelected = false;
                 });
+                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -199,6 +202,7 @@ class _HomeState extends State<Home> {
                   _isFavoritesSelected = true;
                   _isBasketSelected = false;
                 });
+                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -229,6 +233,7 @@ class _HomeState extends State<Home> {
                   _isFavoritesSelected = false;
                   _isBasketSelected = true;
                 });
+                Navigator.pop(context);
               },
             ),
           ],
@@ -263,6 +268,7 @@ class _HomeState extends State<Home> {
                     _isFavoritesSelected = false;
                     _isBasketSelected = false;
                   });
+                  Navigator.pop(context);
                 },
               ),
               title: Text(
@@ -292,6 +298,7 @@ class _HomeState extends State<Home> {
                     _isFavoritesSelected = false;
                     _isBasketSelected = false;
                   });
+                  Navigator.pop(context);
                 },
               ),
               title: Text(
@@ -322,6 +329,7 @@ class _HomeState extends State<Home> {
                     _isFavoritesSelected = false;
                     _isBasketSelected = false;
                   });
+                  Navigator.pop(context);
                 },
               ),
               title: Text(
@@ -351,6 +359,7 @@ class _HomeState extends State<Home> {
                     _isFavoritesSelected = true;
                     _isBasketSelected = false;
                   });
+                  Navigator.pop(context);
                 },
               ),
               title: Text(
@@ -380,6 +389,7 @@ class _HomeState extends State<Home> {
                     _isFavoritesSelected = false;
                     _isBasketSelected = true;
                   });
+                  Navigator.pop(context);
                 },
               ),
               title: Text(

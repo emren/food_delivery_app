@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/models/food_provider.dart';
-import 'package:food_delivery_app/services/size_config.dart';
-import 'package:food_delivery_app/widgets/food_card.dart';
+import 'package:food_delivery_app/controls/food_provider.dart';
+import 'package:food_delivery_app/util/size_config.dart';
+import 'package:food_delivery_app/views/widgets/food_card.dart';
 import 'package:provider/provider.dart';
 
 class FavoritesScreen extends StatefulWidget {
