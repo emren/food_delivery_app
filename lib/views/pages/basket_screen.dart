@@ -6,12 +6,8 @@ import 'package:food_delivery_app/views/widgets/basket_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class BasketScreen extends StatefulWidget {
-  @override
-  _BasketScreenState createState() => _BasketScreenState();
-}
+class BasketScreen extends StatelessWidget {
 
-class _BasketScreenState extends State<BasketScreen> {
   @override
   Widget build(BuildContext context) {
     BasketProvider basketProvider = Provider.of<BasketProvider>(context);

@@ -4,12 +4,8 @@ import 'package:food_delivery_app/util/size_config.dart';
 import 'package:food_delivery_app/views/widgets/food_card.dart';
 import 'package:provider/provider.dart';
 
-class SaladScreen extends StatefulWidget {
-  @override
-  _SaladScreenState createState() => _SaladScreenState();
-}
+class SaladScreen extends StatelessWidget {
 
-class _SaladScreenState extends State<SaladScreen> {
   @override
   Widget build(BuildContext context) {
     FoodProvider foodProvider = Provider.of<FoodProvider>(context);
