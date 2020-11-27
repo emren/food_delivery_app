@@ -1,4 +1,4 @@
-import 'package:food_delivery_app/models/food_model.dart';
+import 'package:food_delivery_app/core/models/food_model.dart';
 
 class BasketItemModel {
   FoodModel model;

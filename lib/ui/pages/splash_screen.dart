@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:after_init/after_init.dart';
-import 'package:food_delivery_app/controls/food_provider.dart';
-import 'package:food_delivery_app/services/api_service.dart';
-import 'package:food_delivery_app/util/size_config.dart';
+import 'package:food_delivery_app/core/services/api_service.dart';
+import 'package:food_delivery_app/core/util/size_config.dart';
+import 'package:food_delivery_app/core/viewmodels/food_provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 

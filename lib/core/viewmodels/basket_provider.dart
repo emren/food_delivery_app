@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/models/basket_item_model.dart';
+import 'package:food_delivery_app/core/models/basket_item_model.dart';
 
 class BasketProvider extends ChangeNotifier {
   List<BasketItemModel> _basketList = [];

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/controls/basket_provider.dart';
-import 'package:food_delivery_app/views/pages/splash_screen.dart';
-import 'package:food_delivery_app/util/size_config.dart';
+import 'package:food_delivery_app/ui/pages/splash_screen.dart';
+import 'package:food_delivery_app/core/util/size_config.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
-import 'controls/food_provider.dart';
+import 'core/viewmodels/basket_provider.dart';
+import 'core/viewmodels/food_provider.dart';
 
 void main() => runApp(MyApp());
 

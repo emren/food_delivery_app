@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/views/pages/basket_screen.dart';
-import 'package:food_delivery_app/views/pages/drinks_screen.dart';
-import 'package:food_delivery_app/views/pages/favorites_screen.dart';
-import 'package:food_delivery_app/views/pages/pizza_screen.dart';
-import 'package:food_delivery_app/views/pages/salad_screen.dart';
-import 'package:food_delivery_app/util/size_config.dart';
+import 'package:food_delivery_app/ui/pages/basket_screen.dart';
+import 'package:food_delivery_app/ui/pages/drinks_screen.dart';
+import 'package:food_delivery_app/ui/pages/favorites_screen.dart';
+import 'package:food_delivery_app/ui/pages/pizza_screen.dart';
+import 'package:food_delivery_app/ui/pages/salad_screen.dart';
+import 'package:food_delivery_app/core/util/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wave_drawer/wave_drawer.dart';
 
@@ -205,6 +205,7 @@ class _HomeState extends State<Home> {
                 Navigator.pop(context);
               },
             ),
+
             ListTile(
               leading: _isBasketSelected
                   ? Image.asset(

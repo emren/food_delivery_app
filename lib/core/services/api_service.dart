@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/models/food_model.dart';
-import 'package:food_delivery_app/controls/food_provider.dart';
+import 'package:food_delivery_app/core/models/food_model.dart';
+import 'package:food_delivery_app/core/viewmodels/food_provider.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:io' show HttpException, Platform, SocketException;

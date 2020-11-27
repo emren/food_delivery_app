@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/controls/food_provider.dart';
-import 'package:food_delivery_app/util/size_config.dart';
-import 'package:food_delivery_app/views/widgets/food_card.dart';
+import 'package:food_delivery_app/core/util/size_config.dart';
+import 'package:food_delivery_app/core/viewmodels/food_provider.dart';
+import 'package:food_delivery_app/ui/widgets/food_card.dart';
 import 'package:provider/provider.dart';
 
 class PizzaScreen extends StatelessWidget {

@@ -1,7 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../models/food_model.dart';
+import 'package:food_delivery_app/core/models/food_model.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FoodProvider extends ChangeNotifier {
