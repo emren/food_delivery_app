@@ -37,6 +37,8 @@ class FoodProvider extends ChangeNotifier {
   }
   */
 
+  List get foodList => _foodList;
+
   void addToFoodList(FoodModel food) {
     _foodList.add(food);
     notifyListeners();
